@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification, Regression, Clustering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="home-page">
+            <h1>AI Machine Learning</h1>
+            <h2>Classification, Regression, or Clustering</h2>
+            <div class="intro-container">
+                <div class="intro-section">
+                    <h2>How to Play</h2>
+                    <ol>
+                        <li>Read each statement carefully</li>
+                        <li>Decide if it represents a Classification, Regression, or Clustering task</li>
+                        <li>Click the corresponding button to answer</li>
+                        <li>Learn from the feedback and continue to the next statement</li>
+                        <li>Answer within the time limit to score points</li>
+                        <li>Build streaks and earn badges as you play!</li>
+                    </ol>
+                </div>
+                <div class="intro-section">
+                    <h2>Understanding AI Tasks</h2>
+                    <div class="concept-box">
+                        <h3>Classification</h3>
+                        <p>Predicting a categorical label or class for input data. It is task-driven supervised learning.</p>
+                        <div class="example">Example: Spam detection, image recognition</div>
+                    </div>
+                    <div class="concept-box">
+                        <h3>Regression</h3>
+                        <p>Predicting a continuous numerical value based on input features. It is task-driven supervised learning.</p>
+                        <div class="example">Example: Price prediction, temperature forecasting</div>
+                    </div>
+                    <div class="concept-box">
+                        <h3>Clustering</h3>
+                        <p>Grouping similar data points together without predefined labels. It is data-driven unsupervised learning.</p>
+                        <div class="example">Example: Customer segmentation, pattern discovery</div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <img src="https://alittlemoreenglish.weebly.com/uploads/2/6/6/3/26638990/the-main-types-of-machine-learning-main-approaches-include-classification-and-regression_orig.png" 
+                         alt="Machine Learning Types" 
+                         style="width: 100%; max-width: 600px; height: auto; margin: 0 auto; display: block;">
+                    <p class="image-citation" style="font-size: 0.8em; color: #666; text-align: center; margin-top: 10px; font-style: italic;">
+                        Source: Peng J, Jury EC, Dönnes P, Ciurtin C. Machine Learning Techniques for Personalised Medicine Approaches in Immune-Mediated Chronic Inflammatory Diseases: Applications and Challenges. Front Pharmacol. 2021 Sep 30.
+                    </p>
+                </div>
+            </div>
+            <button id="start-game-btn" class="start-btn">Start Game</button>
+        </div>
+
+        <div id="game-content" class="hidden">
+            <header>
+                           <h1>AI Machine Learning
+             <span class="level-indicator" id="level-display">Level 1: Novice Analyst</span></h1>
+                <div class="score-container">
+                    <span>Score: <span id="score">0</span></span>
+                    <span>High Score: <span id="high-score">0</span></span>
+                </div>
+            </header>
+
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-value" id="streak-display">0</span>
+                    <span class="stat-label">Current Streak</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="best-streak-display">0</span>
+                    <span class="stat-label">Best Streak</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="game-container">
+                <div class="time-bar-container">
+                    <div class="time-bar" id="time-bar"></div>
+                </div>
+                
+                <div id="scenario-container">
+                    <p id="scenario-text"></p>
+                </div>
+
+                <div class="swot-buttons-container">
+                    <button id="classification-btn" class="classification">Classification</button>
+                    <button id="regression-btn" class="regression">Regression</button>
+                    <button id="clustering-btn" class="clustering">Clustering</button>
+                </div>
+
+                <div id="feedback" class="hidden">
+                    <p id="feedback-text"></p>
+                    <button id="next-btn">Next Statement</button>
+                </div>
+            </div>
+
+            <div class="badges-container" id="badges-container">
+            </div>
+
+            <div id="rewards-container" class="hidden">
+                <h2>Achievement Unlocked!</h2>
+                <div id="reward-icon">🏆</div>
+                <p id="reward-message"></p>
+                <button id="continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://sites.google.com/view/aaronshi" target="_blank" class="footer-link">
+                <img src="https://alittlemoreenglish.weebly.com/uploads/2/6/6/3/26638990/favicon-32x32_orig.png" alt="Aaron Shi" class="footer-icon">
+            </a>
+            <span class="footer-text">Released in April 2025. Created by Aaron Shi.</span>
+        </div>
+    </footer>
+
+    <div class="streak-counter" id="streak-counter">2x Streak!</div>
+
+    <script type="module" src="config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
